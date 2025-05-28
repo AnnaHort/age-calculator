@@ -1,61 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
-  <!-- <link rel="stylesheet" href="/style.css"> -->
-</head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-<header>
-  <button id="lang-toggle">En</button>
-  <h1 id="title">Welcome</h1>
-</header>
+    <link rel="stylesheet" href="./css/style.css" />
 
-<body>
+    <title>Frontend Mentor | Age calculator app</title>
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+  </head>
 
-  <div style="display: flex; align-items: center; gap: 8px;">
-    <h2 class="today-title">Today: </h2>
-    <h3 id="today">--</h3>
-  </div>
+  <body>
+    <header class="header container">
+      <nav class="nav">
+        <button class="lang-btn" id="lang-toggle">En</button>
+      </nav>
+    </header>
+    <main>
+      <!-- hero section -->
+      <section class="hero container">
+        <h1 class="hero__title" id="title">How old are you?</h1>
+        <div class="today">
+          <h2 class="today__title">Today:</h2>
+          <h3 class="today-subtitle" id="today">--</h3>
+        </div>
+      </section>
 
-  <div class="card">
-    <ul>
-      <li>
-        <label for="day" class="day-label">Day</label>
-        <input id="day" type="number" placeholder="DD" required>
-      </li>
-      <li>
-        <label for="month" class="month-label">Month</label>
-        <input id="month" type="number" placeholder="MM" required>
-      </li>
-      <li>
-        <label for="year" class="year-label">Year</label>
-        <input id="year" type="number" placeholder="YYYY" required>
-      </li>
-      <li>
-        <button id="calculate" type="submit">Calculate</button>
-      </li>
-    </ul>
-    <div class="result">
-      <h2 class="congratulations-title">Congratulations! You live in this world already: </h2>
-      <span id="years">--</span> <span class="years">years</span>
-      <span id="months">--</span> <span class="months">months</span>
-      <span id="days">--</span> <span class="days">days</span>
-    </div>
-    <div>
-      <h3 class="title-all-months">In months, that’s: </h3><span class="all-months">--</span>
-      <h3 class="title-all-days">And that’s a total of: </h3>
-      <span class="all-days">--</span> 
-      <h3 class="title-all-minutes">Or an impressive: </h3>
-      <span class="all-minutes">--</span>
-    </div>
+      <!-- card section -->
+      <section class="container">
+        <div class="card__container">
+          <h2 class="card__title">Enter your date of birth:</h2>
+          <ul class="card__form">
+            <li class="card__form-item">
+              <label for="day" class="card__form-label day-label">Day</label>
+              <input
+                class="card__form-input"
+                id="day"
+                type="number"
+                placeholder="DD"
+                required
+              />
+            </li>
+            <li class="card__form-item">
+              <label for="month" class="card__form-label month-label"
+                >Month</label
+              >
+              <input
+                class="card__form-input"
+                id="month"
+                type="number"
+                placeholder="MM"
+                required
+              />
+            </li>
+            <li class="card__form-item">
+              <label for="year" class="card__form-label year-label">Year</label>
+              <input
+                class="card__form-input"
+                id="year"
+                type="number"
+                placeholder="YYYY"
+                required
+              />
+            </li>
+          </ul>
+               <button class="calculate-btn" id="calculate" type="submit">
+                Calculate
+              </button>
+          <div class="result">
+            <h2 class="congratulations-title">
+              Congratulations! You live in this world already:
+            </h2>
+            <span class="result__value" id="years">--</span>
+            <span class="years">years</span>
+            <span class="result__value" id="months">--</span>
+            <span class="months">months</span>
+            <span class="result__value" id="days">--</span>
+            <span class="days">days</span>
+          </div>
+          <div class="all-time">
+            <h3 class="title-all-months">In months, that’s:</h3>
+            <span class="all-months">--</span>
+            <h3 class="title-all-days">And that’s a total of:</h3>
+            <span class="all-days">--</span>
+            <h3 class="title-all-minutes">Or an impressive:</h3>
+            <span class="all-minutes">--</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
 
-  </div>
-
-  <script type="module" src="./main.js"></script>
- </body>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>

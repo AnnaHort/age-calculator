@@ -1,46 +1,157 @@
 @import "reset.css";
 
 :root {
-	--color-body-bgc: #f0f0f0;
-	--color-card-bgc: #ffffff;
-	--color-main-text: ##0e0e0e;
-	--color-secondary-text: #6e6e6e;
-	--color-accent: #864cff;
-	--animation-time-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --color-body-bgc: #f0f0f0;
+  --color-card-bgc: #ffffff;
+  --color-main-text: ##0e0e0e;
+  --color-secondary-text: #6e6e6e;
+  --color-accent: #864cff;
+  --animation-time-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@font-face {
-	font-family: "Avenir Next Regular";
-	src: url("../fonts/AvenirNextCyr-Regular.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
+body {
+  margin: 0;
+  background-color: var(--color-body-bgc);
+  line-height: 1.2;
 }
 
-@font-face {
-	font-family: "Avenir Next Medium";
-	src: url("../fonts/AvenirNextCyr-Medium.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
+.container {
+  max-width: 425px;
+  margin: 0 auto;
+  padding: 0 12px;
 }
 
-@font-face {
-	font-family: "Avenir Next Demi";
-	src: url("../fonts/AvenirNextCyr-Demi.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
+/* nav */
+.nav {
+  padding: 16px 0;
 }
 
-body{
-    margin: 0;
-    background-color: var(--color-body-bgc);
+.lang-btn {
+  padding: 8px 16px;
+  background-color: var(--color-accent);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.container{
-    padding: 0 8px;
+/* hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-/* nav-section */
+.hero__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-main-text);
+}
 
+.today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: var(--color-card-bgc);
+  border-radius: 8px;
+}
 
+.today__title {
+}
+.today__subtitle {
+}
 
+/* card section */
 
+.card__container {
+  max-width: 320px;
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-card-bgc);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: auto;
+  margin-left: auto;
+}
+.card__title {
+}
+.card__form {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  margin-top: 16px;
+}
+.card__form-item {
+  display: flex;
+  flex-direction: column;
+}
+.card__form-label {
+  color: var(--color-secondary-text);
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.day-label {
+}
+
+.card__form-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--color-secondary-text);
+  border-radius: 4px;
+  font-size: 16px;
+  color: var(--color-main-text);
+}
+.month-label {
+}
+.year-label {
+}
+.calculate-btn {
+}
+.result {
+}
+.congratulations-title {
+}
+.result__value {
+}
+.years {
+}
+.months {
+}
+.days {
+}
+.all-time {
+}
+.title-all-months {
+}
+.all-months {
+}
+.title-all-days {
+}
+.all-days {
+}
+.title-all-minutes {
+}
+.all-minutes {
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}

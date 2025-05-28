@@ -6,6 +6,7 @@ const translations = {
     title: "How old are you?",
     button: "UK",
     todayTitle: "Today is: ",
+    cardTitle: "Enter your date of birth:",
     day: "Day",
     month: "Month",
     year: "Year",
@@ -22,6 +23,7 @@ const translations = {
     title: "Скільки вам років?",
     button: "EN",
     todayTitle: "Сьогодні: ",
+    cardTitle: "Введіть вашу дату народження:",
     day: "День",
     month: "Місяць",
     year: "Рік",
@@ -48,8 +50,10 @@ document.getElementById("lang-toggle").addEventListener("click", () => {
     translations[currentLang].title;
   document.getElementById("lang-toggle").textContent =
     translations[currentLang].button;
-  document.querySelector(".today-title").textContent =
+  document.querySelector(".today__title").textContent =
     translations[currentLang].todayTitle;
+      document.querySelector(".card__title").textContent =
+    translations[currentLang].cardTitle;
   document.querySelector(".day-label").textContent =
     translations[currentLang].day;
   document.querySelector(".month-label").textContent =
