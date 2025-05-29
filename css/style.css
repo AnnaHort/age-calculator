@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  max-width: 425px;
+  max-width: 320px;
   margin: 0 auto;
   padding: 0 12px;
 }
@@ -71,11 +71,11 @@ body {
 
 .card__container {
   max-width: 320px;
-  padding: 16px;
+  padding: 20px;
   align-items: center;
   justify-content: center;
   background-color: var(--color-card-bgc);
-  border-radius: 8px;
+  border-radius: 16px 16px 72px 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-right: auto;
   margin-left: auto;
@@ -87,8 +87,9 @@ body {
   justify-content: space-between;
   gap: 8px;
   width: 100%;
-  margin-top: 16px;
+  padding: 20px 0;
 }
+
 .card__form-item {
   display: flex;
   flex-direction: column;
@@ -115,13 +116,78 @@ body {
 .year-label {
 }
 .calculate-btn {
+  position: relative;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 12px 12px;
+  background-color: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--animation-time-transition);
 }
+
+.calculate-btn::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: var(--color-secondary-text);
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  left: 110%;
+}
+.calculate-btn::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: var(--color-secondary-text);
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  right: 110%;
+}
+
 .result {
+  max-width: 184px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0;
+
 }
 .congratulations-title {
 }
-.result__value {
+
+.result__periods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
+.result__value {
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--color-accent);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.result__period{
+   font-size: 44px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
 .years {
 }
 .months {
@@ -129,6 +195,8 @@ body {
 .days {
 }
 .all-time {
+  display: none;
+
 }
 .title-all-months {
 }

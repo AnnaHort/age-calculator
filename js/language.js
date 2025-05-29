@@ -6,16 +6,16 @@ const translations = {
     title: "How old are you?",
     button: "UK",
     todayTitle: "Today is: ",
-    cardTitle: "Enter your date of birth:",
+    // cardTitle: "Enter your date of birth:",
     day: "Day",
     month: "Month",
     year: "Year",
-    calculateButton: "Calculate",
+    // calculateButton: "Calculate",
     days: "Days",
     months: "Months",
     years: "Years",
     titleAllMonths: "In months, that’s: ",
-    congratulationsTitle: "Congratulations! You live in this world already: ",
+    // congratulationsTitle: "Congratulations! You live in this world already: ",
     titleAllDays: "In days, that’s: ",
     titleAllMinutes: "In minutes, that’s: ",
   },
@@ -23,16 +23,16 @@ const translations = {
     title: "Скільки вам років?",
     button: "EN",
     todayTitle: "Сьогодні: ",
-    cardTitle: "Введіть вашу дату народження:",
+    // cardTitle: "Введіть вашу дату народження:",
     day: "День",
     month: "Місяць",
     year: "Рік",
-    calculateButton: "Розрахувати",
+    // calculateButton: "Розрахувати",
     days: "Днів",
     months: "Місяців",
     years: "Років",
     titleAllMonths: "В місяцях це: ",
-    congratulationsTitle: "Вітаємо! Ви вже прожили в цьому світі: ",
+    // congratulationsTitle: "Вітаємо! Ви вже прожили в цьому світі: ",
     titleAllDays: "У днях це: ",
     titleAllMinutes: "А у хвилинах це цілих: ",
   },
@@ -52,23 +52,23 @@ document.getElementById("lang-toggle").addEventListener("click", () => {
     translations[currentLang].button;
   document.querySelector(".today__title").textContent =
     translations[currentLang].todayTitle;
-      document.querySelector(".card__title").textContent =
-    translations[currentLang].cardTitle;
+    //   document.querySelector(".card__title").textContent =
+    // translations[currentLang].cardTitle;
   document.querySelector(".day-label").textContent =
     translations[currentLang].day;
   document.querySelector(".month-label").textContent =
     translations[currentLang].month;
   document.querySelector(".year-label").textContent =
     translations[currentLang].year;
-  document.getElementById("calculate").textContent =
-    translations[currentLang].calculateButton;
+  // document.getElementById("calculate").textContent =
+  //   translations[currentLang].calculateButton;
   document.querySelector(".days").textContent = translations[currentLang].days;
   document.querySelector(".months").textContent =
     translations[currentLang].months;
   document.querySelector(".years").textContent =
     translations[currentLang].years;
-  document.querySelector(".congratulations-title").textContent =
-    translations[currentLang].congratulationsTitle;
+  // document.querySelector(".congratulations-title").textContent =
+  //   translations[currentLang].congratulationsTitle;
   document.querySelector(".title-all-months").textContent =
     translations[currentLang].titleAllMonths;
       document.querySelector(".title-all-days").textContent =
